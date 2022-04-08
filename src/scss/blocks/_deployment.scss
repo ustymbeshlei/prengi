@@ -1,0 +1,50 @@
+.deployment {
+    position: relative;
+    &__title {
+        position: absolute;
+        z-index: 2;
+        width: 380px;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    &__wrapper {
+        z-index: 0;
+        display: flex;
+    }
+    &__item {
+        width: 100%;
+        min-height: 580px;
+        position: relative;
+        z-index: 1;
+        &:first-child {
+            background: url('../img/deployment/cloud_storage.jpg') no-repeat 100%/cover;
+            padding-left: 375px;
+            text-align: right;
+        }
+        &:last-child {
+            background: url('../img/deployment/server.jpg') no-repeat 100%/cover;
+            padding-right: 375px;
+        }
+        .deployment__descr {
+            position: absolute;
+            width: 490px;
+            top: 260px;
+            &-left {
+                right: 82px;
+                @include blue_square(auto, -40px);
+            }
+            &-right {
+                left: 82px;
+                @include blue_square(-40px, auto);
+            }
+        }
+        &-title {
+            text-transform: uppercase;
+        }
+        &-subtitle {
+            margin-top: 20px;
+        }  
+    } 
+}

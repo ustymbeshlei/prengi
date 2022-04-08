@@ -1,0 +1,32 @@
+.advantages {
+    padding: 80px 0;
+    &__title {
+        width: 380px;
+        text-align: center;
+        color: #393939;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 570px);
+        grid-template-rows: repeat(3, 355px);
+        grid-auto-rows: 355px;
+    }
+    &__item {
+        position: relative;
+        &-descr {
+            z-index: 1;
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 23px;
+            line-height: 26px;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            width: 340px;
+        }
+    }
+}

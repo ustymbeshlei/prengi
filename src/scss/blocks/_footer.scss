@@ -1,0 +1,49 @@
+.footer {
+    padding: 50px 0 40px 0;
+    background: #0082a1;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        &-title {
+            line-height: 24px;
+        }
+        &-icon {
+            margin-top: 20px;
+        }
+        &-descr {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: 300;
+            color: #fff;
+            width: 390px;
+        }
+        ul {
+            li {
+                list-style-type: none;
+            }
+        }
+        a {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+        }
+    }
+    &__copyright {
+        margin-top: 35px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 300;
+        color: #fff;
+    }
+}
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #4da8bd;
+    margin-top: 40px;
+}

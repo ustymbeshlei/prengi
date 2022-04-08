@@ -1,0 +1,42 @@
+.btn {
+    width: 240px;
+    height: 60px;
+    background-color: $main-color;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    &:hover{
+        cursor: pointer;
+    }
+    &:active {
+        background-color: #5ccce6;
+    }
+    &_close {
+        border: none;
+        background: none;
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        width: 21px;
+        height: 21px;
+        opacity: 1;
+        cursor: pointer;
+        &:active {
+            opacity: 0.5;
+        }
+        &:before, &:after {
+            position: absolute;
+            content: ' ';
+            height: 21px;
+            width: 2px;
+            background-color: #333;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}

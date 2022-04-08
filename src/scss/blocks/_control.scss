@@ -1,0 +1,80 @@
+.control {
+    width: 100%;
+    padding-top: 40px;
+    background: url('../img/bg/main_bg.jpg') no-repeat 100%/cover;
+    box-sizing: border-box;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        margin-top: 15px;
+        display: flex;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-size: 13px; 
+        line-height: 26px;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    &__link {
+        margin-left: 45px;
+    }
+    &__btn_open {
+        margin-top: 15px;
+        position: absolute;
+        right: 0;
+        display: none;  
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            img {
+                width: 21px;
+                height: 21px;
+            }
+        }
+        
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__descr {
+        margin-top: 120px;
+    }
+    &__title {
+        width: 530px;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        width: 430px;
+        b {
+            font-weight: 400;
+        }
+    }
+    &__btn {
+        width: 240px;
+        margin-top: 40px;
+    }
+    &__phone {
+        margin-top: 22px;
+    }
+    .hamburger {
+        height: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 23px;
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+
+}

@@ -16,12 +16,13 @@
         background: none;
         display: none;
         position: absolute;
-        right: 20px;
-        top: 5px;
-        width: 21px;
-        height: 21px;
+        right: 10px;
+        top: 0;
+        width: 30px;
+        height: 40px;
         opacity: 1;
         cursor: pointer;
+        z-index: 23;
         &:active {
             opacity: 0.5;
         }

@@ -3,18 +3,44 @@
         width: 960px;
         position: relative;
     }
+    .overlay {
+        &.active {
+           visibility: visible;
+           opacity: 0.5;
+        }
+    }
     .countries {
+        justify-content: flex-start;
         margin: 0;
+        height: 100%;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        .container{
+            width: 280px;
+        }
+        @include menu_active;
+        &.active {
+            right: 0;
+            visibility: visible;
+            opacity: 1;
+        }
         &__menu {
-            @include menu_active;
+            margin: 30px 0 60px 0;
+            flex-direction: column;
+            z-index: 11;
+            width: 100%;
         }
         &__item {
             display: flex;
-            justify-content: center;
             padding: 10px 20px;
             right: -100%;
             &-contacts {
                 width: 190px;
+            }
+        }
+        &__btn{
+            &_close {
+                display: block;
             }
         }
         .active {
@@ -45,10 +71,11 @@
     .control {
         &__menu {
             @include menu_active;
-            //left: 0;
+            padding-top: 40px;
+            justify-content: flex-start;
             width: 280px;
-            overflow: hidden;
-            padding-top: 120px;
+            height: 100vh;
+            overflow: scroll;
             right: -100%;
             &.active {
                 right: 0;
@@ -57,6 +84,7 @@
         &__list {
             flex-direction: column;
             margin: 0 auto;
+            text-transform: none;
             font-size: 18px;
             line-height: 50px;
         }
@@ -119,11 +147,60 @@
     .container {
         width: 540px;
     }
+    .control {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__descr {
+            text-align: center;
+            width: 100%;
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 40px;
+        }
+        &__subtitle {
+            margin: 0 auto;
+            margin-top: 40px;
+            font-size: 22px;
+            width: 400px;
+        }
+        &__btn {
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+        &__phone {
+            margin-top: 40px;
+        }
+    }
     
 }
 
 @media (max-width: 576px) {
     .container {
-        width: 100%;
+        width: 320px;
+    }
+    .control {
+        &__title {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        &__subtitle {
+            font-size: 17px;
+            width: 100%;
+        }
+        &__btn {
+            .btn {
+                width: 200px;
+                height: 50px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        width: 300px;
     }
 }

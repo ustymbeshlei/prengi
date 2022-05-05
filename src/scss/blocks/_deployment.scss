@@ -10,6 +10,7 @@
         text-align: center;
     }
     &__wrapper {
+        position: relative;
         z-index: 0;
         display: flex;
     }
@@ -18,26 +19,25 @@
         min-height: 580px;
         position: relative;
         z-index: 1;
-        &:first-child {
+        &_first {
             background: url('../img/deployment/cloud_storage.jpg') no-repeat 100%/cover;
-            padding-left: 375px;
             text-align: right;
         }
-        &:last-child {
+        &_second {
             background: url('../img/deployment/server.jpg') no-repeat 100%/cover;
-            padding-right: 375px;
         }
         .deployment__descr {
-            position: absolute;
+            position: relative;
             width: 490px;
-            top: 260px;
-            &-left {
-                right: 82px;
-                @include blue_square(auto, -40px);
+            margin: 0 auto;
+            margin-top: 260px;
+            &_left {
+                margin-right: 82px;
+                @include blue_square(-30px, auto, -40px);
             }
-            &-right {
-                left: 82px;
-                @include blue_square(-40px, auto);
+            &_right {
+                margin-left: 82px;
+                @include blue_square(-30px, -40px, auto);
             }
         }
         &-title {

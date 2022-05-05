@@ -1,12 +1,13 @@
-@mixin blue_square($left, $right) {
+@mixin blue_square($top, $left, $right) {
     &:before {
         content:'';
         position: absolute;
         z-index: -1;
+        overflow: hidden;
         width: 165px;
         height: 165px;
         background-color: rgba(0, 194, 240, 0.3);
-        top: -30px;
+        top: $top;
         right: $right;
         left: $left;
     }

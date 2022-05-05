@@ -90,6 +90,24 @@
             }
         }
     }
+    .deployment {
+        &__wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+        &__item {
+            &_first, &_second {
+                box-sizing: border-box;
+                padding: 0 auto;
+            }
+            .deployment__descr {
+                &_left, &_right {
+                    margin: 0 auto;
+                    margin-top: 260px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -97,9 +115,7 @@
         width: 720px;
     }
     .title {
-        &_fz30 {
-            font-size: 28px;
-        }
+
     }
     .control {
         &__menu {
@@ -282,8 +298,14 @@
     }
     .advantages {
         &__wrapper {
-
             grid-template-columns: 1fr;
+        }
+    }
+    .deployment {
+        &__item {
+            .deployment__descr {
+                width: 460px;
+            }
         }
     }
     
@@ -352,6 +374,27 @@
             }
         }
 
+    }
+    .deployment {
+        &__title {
+            width: 300px;
+        }
+        &__item {
+            .deployment__descr {
+                width: 300px;
+                &_left {
+                    margin-right: auto;
+                    @include blue_square(-20px, auto, -10px);
+                }
+                &_right {
+                    margin-left: auto;
+                    @include blue_square(-20px, -10px, auto);
+                }
+            }
+            &-subtitle {
+                font-size: 16px;
+            }
+        }
     }
 }
 @media (max-width: 320px) {

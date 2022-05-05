@@ -61,6 +61,9 @@
     }
     &__phone {
         margin-top: 22px;
+        img {
+            display: block;
+        }
     }
     .hamburger {
         height: 17px;

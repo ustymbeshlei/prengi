@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon//favicon-16x16.png">
     <link rel="manifest" href="icons/favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Prengi</title>
 </head>
@@ -71,7 +72,7 @@
                     <span></span>
                 </div>
                 <div class="control__menu">
-                    <button class="btn_close control__menu_close"></button>
+                    <button class="btn btn_close control__menu_close"></button>
                     <nav>
                         <ul class="control__list">
                             <li class="control__link"><a href="#">Главная</a></li>
@@ -92,7 +93,7 @@
                     <h2 class="title title_fz24 control__subtitle"><b>PRENGI</b> - Платформа для прозрачного управления бизнесом</h2>
                     <div class="control__btn"><button class="btn title title_fz16">Получить доступ</button></div>
                 </div>
-                <div class="control__phone">
+                 <div class="control__phone">
                     <img src="img/control/phone.png" alt="phone">
                 </div>
             </div>
@@ -146,62 +147,76 @@
             </div>
         </div>
     </section>
-    <!-- <section class="solution">
+    <section class="solution">
         <div class="container">
-            <h2 class="solution__title title title__fz30">Prengi предоставляет экспертные решения
-                для Вашей отрасли</h2>
-            <div class="solution__menu">
-                    <div class="solution__menu-link"><a href="#">Prengi Production</a></div>
-                    <div class="solution__menu-link"><a href="#">Prengi FMC</a></div>
-                    <div class="solution__menu-link"><a href="#">Prengi Mallz Retail</a></div>
-                    <div class="solution__menu-link"><a href="#">Prengi Logistic</a></div>
-                    <div class="solution__menu-link"><a href="#">Prengi IT</a></div>
-                    <div class="solution__menu-link"><a href="#">Prengi HR</a></div>
-            </div>
-            <div class="solution__control">
-                <div class="solution__control-macbook">
-                    <img src="img/solution/macbook-air.png" alt="macbook">
-                    <div class="solution__control-img">
-                        <img src="img/solution/slide_1.png" alt="first">
+            <h2 class="solution__title title title_fz30">Prengi предоставляет экспертные решения для Вашей отрасли</h2>
+            <div class="solution__slider">
+                <div class="solution__menu">
+                    <ul class="solution__list">
+                        <li class="solution__link"><button class="solution__btn">Prengi Production</button></li>
+                        <li class="solution__link"><button class="solution__btn">Prengi FMC</button></li>
+                        <li class="solution__link"><button class="solution__btn">Prengi Mallz Retail</button></li>
+                        <li class="solution__link"><button class="solution__btn">Prengi Logistic</button></li>
+                        <li class="solution__link"><button class="solution__btn">Prengi IT</button></li>
+                        <li class="solution__link"><button class="solution__btn">Prengi HR</button></li>
+                    </ul>
+                </div>
+                <div class="solution__macbook">
+                    <div class="solution__carousel">
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
+                        <div class="solution__slide">
+                            <img src="img/solution/slide_1.png" alt="slide">
+                        </div>
                     </div>
                 </div>
-                <button class="chevron chevron-left"></button>
-                <span class="chevron chevron-right"></span>
             </div>
         </div>
-    </section> -->
-    <!-- <section class="advantages">
+    </section>
+    <section class="advantages">
         <div class="container">
-            <h2 class="advantages__title title title__fz30">Преимущества Prengi для Вашей отрасли</h2>
+            <h2 class="advantages__title title title_fz30">Преимущества Prengi для Вашей отрасли</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item">
-                    <img src="img/advantage/testing.jpg" alt="testing">
+                    <img class="advantages__item-img"src="img/advantage/testing.jpg" alt="testing">
                     <div class="advantages__item-descr">Возможность внедрения и тестирования в реальном времени</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="img/advantage/intellect.jpg" alt="intellect">
+                    <img class="advantages__item-img"src="img/advantage/intellect.jpg" alt="intellect">
                     <div class="advantages__item-descr">Система “Intellect”, учет уровня доступов</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="img/advantage/world.jpg" alt="world">
+                    <img class="advantages__item-img"src="img/advantage/world.jpg" alt="world">
                     <div class="advantages__item-descr">Возможность использовать из любой точки мира с любого устройства</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="img/advantage/install.jpg" alt="install">
+                    <img class="advantages__item-img"src="img/advantage/install.jpg" alt="install">
                     <div class="advantages__item-descr">Нет необходимости установки и стационарной работы программиста</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="img/advantage/alive.jpg" alt="alive">
-                    <div class="advantages__item-descr">“Живые”<br>
-                        бизнес-процессы</div>
+                    <img class="advantages__item-img"src="img/advantage/alive.jpg" alt="alive">
+                    <div class="advantages__item-descr">“Живые”<br>бизнес-процессы</div>
                 </div>
                 <div class="advantages__item">
-                    <img src="img/advantage/deposit.jpg" alt="deposit">
+                    <img class="advantages__item-img"src="img/advantage/deposit.jpg" alt="deposit">
                     <div class="advantages__item-descr">Никаких предоплат, оплата после старта</div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- <section class="deployment">
             <div class="deployment__title title title__fz30">Варианты развертывания Ваших данных</div>
         <div class="deployment__wrapper">
@@ -279,6 +294,9 @@
             <hr class="divider"></hr>
         <div class="footer__copyright">© Prengi Ink. 2008-2017 Все права защищены.</div>
     </footer> -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

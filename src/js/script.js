@@ -13,13 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => {
         menu.classList.add('active');
         openOverlay();
-        //document.body.style.overflow = 'hidden';
     });
 
     function closeMenu() {
         menu.classList.remove('active');
         closeOverlay();
-        //document.body.style.overflow = '';
     }
     
     menuBtnClose.addEventListener('click', closeMenu);
@@ -34,13 +32,11 @@ window.addEventListener('DOMContentLoaded', () => {
     countriesBtnOpen.addEventListener('click', () => {
         countriesMenu.classList.add('active');
         openOverlay();
-        //document.body.style.overflow = 'hidden';
     });
 
     function closeCountries() {
         countriesMenu.classList.remove('active');
         closeOverlay();
-        //document.body.style.overflow = '';
     }
 
     countriesBtnClose.addEventListener('click', closeCountries);
@@ -64,5 +60,41 @@ window.addEventListener('DOMContentLoaded', () => {
             closeMenu();
         }
     });
+
+
+
+    //Slider
+
+    const sliderSlides = document.querySelectorAll('.solution__btn'),
+          dots = document.querySelectorAll('.slick-dots > button');
+
+
+    $(document).ready(function(){
+        $('.solution__carousel').slick({
+            prevArrow: '<button type="button" class="chevron chevron-left"></button>',
+            nextArrow: '<button type="button" class="chevron chevron-right"></button>',
+            autoplay: true,
+            dots: true,
+            appendDots: $('.solution__menu'),
+            customPaging: function(slider, i) {
+                return sliderSlides[i];
+            },
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
+        });
+      });
+
 });
 

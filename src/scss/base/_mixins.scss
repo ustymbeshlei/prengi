@@ -35,3 +35,18 @@
         opacity: 1;
     }
 }
+
+@mixin dots ($border-clr, $bgc){
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        //transform: translateY(-50%);
+        left: 0;
+        border: 1px solid $border-clr;
+        border-radius: 100%;
+        width: 5px;
+        height: 5px;
+        background-color: $bgc;
+    }
+}

@@ -76,6 +76,12 @@
         overflow: hidden;
         margin: 0 auto;
         z-index: 2;
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: fill;
+        }
     }
 }
 

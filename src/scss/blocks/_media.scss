@@ -114,9 +114,6 @@
     .container {
         width: 720px;
     }
-    .title {
-
-    }
     .control {
         &__menu {
             @include menu_active;
@@ -243,6 +240,19 @@
             }
         }
     }
+    .footer {
+        &__wrapper {
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        &__column {
+            width: 33%;
+            &:first-child {
+                width:auto;
+            }
+        }
+    }
 
 }
 
@@ -308,7 +318,14 @@
             }
         }
     }
-    
+    .footer {
+        &__wrapper {
+            justify-content: center;
+        }
+        &__column {
+            width: 390px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -393,6 +410,17 @@
             }
             &-subtitle {
                 font-size: 16px;
+            }
+        }
+    }
+    .footer {
+        &__column {
+            width: 320px;
+            &:first-child {
+                width: 320px;
+            }
+            &-descr {
+                width: 100%;
             }
         }
     }

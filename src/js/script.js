@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
         $('.solution__carousel').slick({
             prevArrow: '<button type="button" class="chevron chevron-left"></button>',
             nextArrow: '<button type="button" class="chevron chevron-right"></button>',
-            autoplay: true,
+            autoplay: false,
             dots: true,
             appendDots: $('.solution__menu'),
             customPaging: function(slider, i) {

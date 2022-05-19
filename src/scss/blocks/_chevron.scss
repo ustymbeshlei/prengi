@@ -1,0 +1,50 @@
+.chevron{
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &::before {
+        border-style: solid;
+        border-color: $main-color;
+        border-width: 2px 2px 0 0;
+        content: '';
+        display: inline-block;
+        height: 40px;
+        position: relative;
+        transform: rotate(-45deg);
+        vertical-align: top;
+        width: 40px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:active {
+        &:before {
+            border-color: #fff;
+        }
+    }
+    &-right{
+        right: -155px;
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+    &-left{
+        left: -155px;
+        &:before {
+            transform: rotate(-135deg);
+        }
+    }
+    &-top {
+        top: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        &:before {
+            transform: rotate(-45deg);
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

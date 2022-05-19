@@ -8,12 +8,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const hamburger = document.querySelector('.hamburger'),
           menu = document.querySelector('.control__menu'),
+          menuLink = document.querySelectorAll('.control__link'),
           menuBtnClose = document.querySelector('.control__menu_close');
     
     hamburger.addEventListener('click', () => {
         menu.classList.add('active');
         openOverlay();
     });
+
+    menuLink.forEach(item => {
+        item.addEventListener('click', closeMenu);
+    });
+    
 
     function closeMenu() {
         menu.classList.remove('active');
@@ -58,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if(e.target === overlay) {
             closeCountries();
             closeMenu();
+            closeModal();
         }
     });
 
@@ -65,8 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Slider
 
-    const sliderSlides = document.querySelectorAll('.solution__btn'),
-          dots = document.querySelectorAll('.slick-dots > button');
+    const sliderSlides = document.querySelectorAll('.solution__btn');
 
 
     $(document).ready(function(){
@@ -95,6 +101,64 @@ window.addEventListener('DOMContentLoaded', () => {
             ]
         });
       });
+
+      //Pageup
+
+      const pageupBtn = document.querySelector('.pageup');
+
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 700) {
+              pageupBtn.classList.add('active');
+          } else {
+              pageupBtn.classList.remove('active');
+          }
+      });
+
+      //Modal 
+
+      const modal = document.querySelector('.modal'),
+            modalMini = document.querySelector('.modal_mini'),
+            btnModalClose = document.querySelectorAll('.modal__close'),
+            btnAccess = document.querySelectorAll('[data-modal="access"]'),
+            btnSubmit = document.querySelector('.btn_submit');
+
+        function openModal() {
+            openOverlay();
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            closeOverlay();
+            modal.classList.remove('active');
+        }
+
+        function closeModalMini() {
+            closeOverlay();
+            modalMini.classList.remove('active');
+        }
+        
+        btnAccess.forEach(e => {
+            e.addEventListener('click', ()=> {
+                openModal();
+            });
+        });
+
+        
+
+        btnModalClose.forEach(e => {
+            e.addEventListener('click', ()=> {
+                closeModal();
+                closeOverlay();
+                closeModalMini();
+            });  
+        });
+
+        
+        
+
+    //Masked input forms
+    
+    $('input[name=phone').mask("+38 (999) 999-99-99");
 
 });
 

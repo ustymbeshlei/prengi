@@ -7,6 +7,17 @@
         display: flex;
         justify-content: space-between;
     }
+    &__menu {
+        &-title {
+            display: none;
+            margin-left: 50px;
+            font-size: 32px;
+            line-height: 42px;
+            //text-align: center;
+            color: #808080;
+            font-weight: 400;
+        }
+    }
     &__list {
         margin-top: 15px;
         display: flex;
@@ -44,9 +55,12 @@
     }
     &__descr {
         margin-top: 120px;
+        //margin: 120px 100px 120px 0;
+        width: 530px;
+        //margin-bottom: 195px;
     }
     &__title {
-        width: 530px;
+        width: 100%;
     }
     &__subtitle {
         margin-top: 20px;
@@ -63,6 +77,8 @@
         margin-top: 22px;
         img {
             display: block;
+            width: 100%;
+            max-height: 570px;
         }
     }
     .hamburger {
@@ -77,6 +93,7 @@
             width: 23px;
             height: 2px;
             background-color: #fff;
+            border-radius: 1px;
         }
     }
 

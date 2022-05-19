@@ -6,9 +6,30 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 1140px;
     margin: 0 auto;
+}
+.pageup {
+    //display: none;
+    visibility: 0;
+    opacity: 0;
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(90,90,90,0.3);
+    border-radius: 100%;
+    transition: all 0.5s;
+    &.active {
+        visibility: 1;
+        opacity: 1;
+    }
 }
 @import 'base/variables';
 @import 'base/mixins';
@@ -25,3 +46,6 @@
 @import 'blocks/footer';
 @import 'blocks/media';
 @import 'blocks/overlay';
+@import 'blocks/chevron';
+@import 'blocks/forms';
+@import 'blocks/modal';

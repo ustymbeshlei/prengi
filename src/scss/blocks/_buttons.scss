@@ -9,7 +9,10 @@
         cursor: pointer;
     }
     &:active {
-        background-color: #5ccce6;
+        background-color: #00b9e2;
+    }
+    &_submit {
+        margin: 0 auto;
     }
     &_close {
         border: none;

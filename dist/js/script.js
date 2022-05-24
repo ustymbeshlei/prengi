@@ -54,10 +54,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function openOverlay() {
         overlay.classList.add('active');
+        document.body.style.overflow = "hidden";
+        //document.body.style.touchAction = "none";
+        //disableMobileScroll();
     }
 
     function closeOverlay() {
         overlay.classList.remove('active');
+        document.body.style.overflow = "";
+        //document.body.style.touchAction = "";
+        //enableMobileScroll();
     }
 
     overlay.addEventListener('click', (e) => {
@@ -159,6 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //Masked input forms
     
     $('input[name=phone').mask("+38 (999) 999-99-99");
+
 
 });
 

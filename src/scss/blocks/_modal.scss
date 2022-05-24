@@ -8,6 +8,9 @@
     background-color: #f2f2f2;
     width: 380px;
     min-height: 400px;
+    overflow-y: auto !important;
+    overscroll-behavior-y: contain;
+    overflow-x: hidden;
     padding: 40px 40px 0 40px;
     border-radius: 5px;
     z-index: 10;

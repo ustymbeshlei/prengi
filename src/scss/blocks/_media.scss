@@ -6,10 +6,10 @@
     .countries {
         justify-content: flex-start;
         margin: 0;
-        height: 100%;
-        overflow-y: scroll;
-        overscroll-behavior-y: contain;
-        .container{
+        // height: 100%;
+        // overflow-y: scroll;
+        // overscroll-behavior-y: contain;
+        &__container{
             width: 280px;
         }
         @include menu_active;
@@ -116,13 +116,17 @@
         width: 720px;
     }
     .control {
+        // &__nav {
+        //     height: 265px;
+        //     overflow-y: scroll;
+        // }
         &__menu {
             @include menu_active;
             padding-top: 50px;
             justify-content: flex-start;
             width: 280px;
-            height: 100vh;
-            overflow: scroll;
+            //height: 100%;
+            //overflow-x: scroll;
             right: -100%;
             &.active {
                 right: 0;
@@ -517,5 +521,12 @@
                 max-height: 235px;
             }
         }
+    }
+}
+
+@media (max-height: 400px) {
+    .modal.active {
+        min-height: auto;
+        height: 100%;
     }
 }
